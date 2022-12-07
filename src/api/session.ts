@@ -1,14 +1,25 @@
 import axios from "axios"
+import { Session } from "inspector"
+import { handleAxiosError } from "./err/axios"
 
 import { API_BASE_URL } from "./properties"
 
 import {
   APISessionResponse,
+  APISessionSignUpData,
   EncodeResult,
-  Session
 } from "./types"
 
 export const mount = (extension: string): string => `${API_BASE_URL}/session/${extension}`
+
+export const signup = async (userData: APISessionSignUpData): Promise<APISessionResponse<EncodeResult>> => {
+  try {
+    
+  } catch (err) {
+
+  }
+  return { type: "unhandled", err: null }  
+}
 
 export const signin = async (email: string, password: string): Promise<APISessionResponse<EncodeResult>> => {
   try {
@@ -21,25 +32,9 @@ export const signin = async (email: string, password: string): Promise<APISessio
     return { type: "unhandled", err: null }
   } catch (err: any) {
     if (axios.isAxiosError(err)) {
-      if (!err.response || !err.response.status) {
-        return { type: "network-error" } 
-      }      
-
-      switch (err.response.status) {
-        case 400:
-          return { type: "bad-request" }
-        case 401:
-          if (err.response.data && err.response.data.message === "wrong-credentials") {
-            return { type: "wrong-credentials" }
-          }
-
-          return { type: "unauthorized" }
-      }
-
-      // console.log(`AxiosError: ${JSON.stringify(err.response)}`)
-      return { type: "unhandled", err: null }
+      return handleAxiosError(err)
     }
-    
+
     throw err
   }
 }
