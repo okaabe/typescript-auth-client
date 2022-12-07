@@ -1,0 +1,28 @@
+export type Session = {
+  email: string
+  surname: string
+  name: string
+
+  createdAt: Date
+
+  issuedAt: number
+  expiresAt: number
+}
+
+export type APISessionResponse <T> = 
+  | { type: "authenticated", data: T }
+  | { type: "rewoke", data: T, token: string }
+  | { type: "created", data: T }
+  | { type: "refused" }
+  | { type: "wrong-credentials" }
+  | { type: "unauthorized" }
+  | { type: "internal-server-error" }
+  | { type: "bad-request" }
+  | { type: "network-error" }
+  | { type: "unhandled", err: unknown }
+
+export type EncodeResult = {
+  expiresAt: number
+  issuedAt: number
+  token: string
+}
