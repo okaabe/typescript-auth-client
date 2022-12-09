@@ -8,7 +8,6 @@ const Home = () => {
   const [output, setOutput] = React.useState<string>("Empty")
 
   const callback = React.useCallback(() => {
-    
     signup({
       email: "admin.admin@hotmail.com",
       password: "test",
@@ -16,6 +15,8 @@ const Home = () => {
       name: "carlos",
       surname: "henrique",
     }).then((response) => {
+
+      console.log(response)
       setOutput(JSON.stringify(response))
     }).catch((err) => {
       console.log(err)

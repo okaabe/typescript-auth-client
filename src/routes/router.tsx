@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 
 import HomePage from "../pages/home"
 import SignInPage from "../pages/signin"
+import RewokePage from "../pages/rewoke"
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <SignInPage />
+  },
+  {
+    path: "/rewoke",
+    element: <RewokePage />
   }
 ])
 
