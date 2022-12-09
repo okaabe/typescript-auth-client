@@ -1,18 +1,33 @@
+import axios, { isAxiosError } from "axios"
 import React from "react"
+import { handleAxiosError } from "../../api/err/axios"
 
-import { signin } from "../../api/session"
+import { signin, signup } from "../../api/session"
 
 const Home = () => {
-  React.useEffect(() => {
-    signin("admin2@adminn.com", "admin").then((apiResponse) => {
-      console.log(`Wrapper: ${JSON.stringify(apiResponse)}`)
+  const [output, setOutput] = React.useState<string>("Empty")
+
+  const callback = React.useCallback(() => {
+    
+    signup({
+      email: "admin.admin@hotmail.com",
+      password: "test",
+
+      name: "carlos",
+      surname: "henrique",
+    }).then((response) => {
+      setOutput(JSON.stringify(response))
     }).catch((err) => {
-      console.error(err)
+      console.log(err)
+        // setOutput(JSON.stringify(err))
     })
   }, [])
 
   return (
-    <h1>Hello World</h1>
+    <div>
+      <h1>{output}</h1>
+      <button onClick={callback}>Run</button>
+    </div>
   )
 }
 
