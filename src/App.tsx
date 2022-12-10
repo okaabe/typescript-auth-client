@@ -1,13 +1,16 @@
 import React from "react"
 
 import { RouterProvider } from "react-router-dom"
+import { SessionContextProvider } from "./hooks/session"
 
 import router from "./routes/router"
 
 const App = () => {
   return (
     <>
-      <RouterProvider router={router}/>
+      <SessionContextProvider>
+        <RouterProvider router={router}/>
+      </SessionContextProvider>
     </>
   )
 }
