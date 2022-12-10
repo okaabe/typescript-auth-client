@@ -1,22 +1,16 @@
 import { createBrowserRouter } from "react-router-dom"
 
+import AuthRoute from "./authRoute"
+
 import HomePage from "../pages/home"
+import SignUpPage from "../pages/signup"
 import SignInPage from "../pages/signin"
-import RewokePage from "../pages/rewoke"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
+    element: <h1>hello world</h1>
   },
-  {
-    path: "/signin",
-    element: <SignInPage />
-  },
-  {
-    path: "/rewoke",
-    element: <RewokePage />
-  }
 ])
 
 export default router
