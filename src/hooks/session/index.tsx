@@ -1,6 +1,5 @@
 import React from "react"
 
-import { rewoke } from "../../api/session"
 import { useToken } from "./token"
 
 export type SessionContextType = {
