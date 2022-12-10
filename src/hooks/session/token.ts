@@ -9,11 +9,7 @@ export const useToken = (key: string, defaultValue: string): TokenStateResponse 
     const [token, setToken] = React.useState<string>(() => {
         const storedValue = localStorage.getItem(key)
 
-        if (storedValue && storedValue.trim() !== "") {
-            return storedValue
-        } else {
-            return defaultValue
-        }
+        return storedValue && storedValue?.trim() !== "" ? storedValue : defaultValue
     })
 
     useEffect(() => {
