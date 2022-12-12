@@ -10,7 +10,7 @@ const AuthRoute = (props: { children: React.ReactNode }) => {
     return <>{ props.children }</>
   }
 
-  return <Navigate to="/"/>
+  return <Navigate to="/signup"/>
 }
 
 export default AuthRoute
