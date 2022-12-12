@@ -45,12 +45,13 @@ export const StyledFormContainer = styled.div`
   border-radius: 3px;
 
   width: 50%;
-  height: 65%;
+  /* height: 65%; */
+  height: auto;
 
   padding-left: 35px;
   padding-right: 30px;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 10%;  
 
   box-shadow:
     2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -60,29 +61,6 @@ export const StyledFormContainer = styled.div`
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
     100px 100px 80px rgba(0, 0, 0, 0.07);
 
-  @media only screen and (max-height: 1080px) {
-    height: 68%;
-  }
-
-  @media only screen and (max-height: 960px) {
-    height: 70%;
-  }
-
-  @media only screen and (max-height: 900px) {
-    height: 75%;
-  }
-
-  @media only screen and (max-height: 860px) {
-    height: 80%;
-  }
-
-  @media only screen and (max-height: 800px) {
-    height: 85%;
-  }
-
-  @media only screen and (max-height: 741px) {
-    height: 90%;
-  }
 
   @media only screen and (max-width: 1366px) {
     width: 60%;
@@ -90,12 +68,10 @@ export const StyledFormContainer = styled.div`
 
   @media only screen and (max-width: 1234px) {
     width: 70%;
-    height: 85%;
   }
 
   @media only screen and (max-width: 933px) {
     width: 50%;
-    height: 80%;
   }
 `
 
@@ -145,7 +121,7 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 95%;
+  width: 100%;
   height: auto;
 
   margin-top: 10px;
@@ -159,12 +135,19 @@ export const InputContainer = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  height: 40px;
+  height: 50px;
 
   border-radius: 3px;
   border: 1px solid;
   border-color: #c5c5c5;
   outline: none;
+
+  padding-left: 10px;
+  font-size: 20px;
+
+  @media only screen and (max-width: 1564px) {
+    height: 45px;
+  }
 `
 
 export const ButtonCollection = styled.div`
@@ -175,10 +158,10 @@ export const ButtonCollection = styled.div`
   align-items: center;
   /* justify-content: center; */
 
-  margin-top: 15px;
+  margin-top: 10%;
 
-  padding-left: 6px;
-  padding-right: 6px;
+  /* padding-left: 6px; */
+  /* padding-right: 6px;   */
 `
 
 export const SignUpButton = styled.button`
