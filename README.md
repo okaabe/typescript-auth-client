@@ -3,7 +3,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
-![GitHub latest version](https://img.shields.io/github/v/release/tosuki/typescript-auth-server?color=purple&style=for-the-badge)
+![GitHub latest version](https://img.shields.io/github/v/release/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
 
 Simple SPA for consume the [typescript-auth-server](https://github.com/tosuki/typescript-auth-server)
 
