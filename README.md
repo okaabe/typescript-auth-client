@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# typescript-auth-client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub stars](https://img.shields.io/github/stars/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/tosuki/typescript-auth-client?color=purple&style=for-the-badge)
+![GitHub latest version](https://img.shields.io/github/v/release/tosuki/typescript-auth-server?color=purple&style=for-the-badge)
 
-## Available Scripts
+Simple SPA for consume the [typescript-auth-server](https://github.com/tosuki/typescript-auth-server)
 
-In the project directory, you can run:
+### User guide
+Before you clone this repository, you need to setup the [auth service](https://github.com/tosuki/typescript-auth-server)
 
-### `yarn start`
+```
+- git clone https://github.com/tosuki/typescript-auth-client ./client
+- cd typescript-auth-client
+- npm install
+- npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once you access the site which will be located on http://localhost:3000, you will be redirected to the /signup page once you still don't have an account
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Purpose of the project
+The purpose of the project is to learn how to handle [jwt](https://jwt.io/) (Json Web Token)
 
-### `yarn test`
+### Licensing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is using the [Apache 2 License] (LICENSE).
 
-### `yarn build`
+```
+Copyright 2022 Gabrielle Guimarães de Oliveira
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    http://www.apache.org/licenses/LICENSE-2.0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
